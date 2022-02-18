@@ -1,0 +1,25 @@
+// task task1 << {
+//    println 'Task1 Example'
+// }
+
+// task task2(dependsOn: task1) << {
+//    println 'Task2 Example'
+// }
+
+// task hello {
+//   doLast {
+//    println 'example task'
+//   }
+// }
+
+// task task2 {
+//    println 'Task2 Example'
+// }
+
+task task1 {
+   println 'Task1 Example'
+}
+
+task task2(dependsOn: task1) {
+   println 'Task2 Example'
+}

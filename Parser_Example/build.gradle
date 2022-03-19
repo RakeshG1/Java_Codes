@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+//apply plugin: 'java'
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    //central maven repo
+    mavenCentral()
+}
+
+// https://stackoverflow.com/questions/21037879/add-library-to-gradle-build
+//dependencies {
+//    compile files('libs/a.jar', 'libs/b.jar')
+//    compile fileTree(dir: 'libs', include: '*.jar')
+//}
+
+//dependencies {
+//    //local file
+//    // compile files('libs/toxiclibscore.jar')
+//    //dependencies from a remote repository
+//    //compile 'java3d:vecmath:1.3.1', 'commons-lang:commons-lang:2.6'
+//    compile 'com.opencsv:opencsv:5.5.1'
+
+// https://mvnrepository.com/artifact/com.opencsv/opencsv/5.5.1
+//    implementation 'com.opencsv:opencsv:5.5.1'
+//    http://opencsv.sourceforge.net/dependency-info.html
+//}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'com.opencsv:opencsv:5.6'
+}
+
+test {
+    useJUnitPlatform()
+}
